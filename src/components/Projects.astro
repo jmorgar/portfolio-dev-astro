@@ -1,0 +1,68 @@
+---
+import { TAGS } from "../utils/tags";
+import GitHub from "./icons/GitHub.astro";
+import LinkButton from "./LinkButton.astro";
+import Link from "./icons/Link.astro";
+
+const PROJECTS = [
+  {
+    title: "Guttis Clasic Cars",
+    description:
+      "Web donde se podrán ver varios coches clásicos los cuales se pueden alquilar para eventos o disfrute personal.",
+    link: "https://gutis-clasic-cars.vercel.app/",
+    github: "https://github.com/jmorgar/gutis-clasic-cars",
+    image: "/projects/gutisCar.webp",
+    tags: [TAGS.HTML, TAGS.Astro, TAGS.Tailwind],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ title, description, link, github, image, tags }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-blue-400 mb-2">{title}</h3>
+        <div class="mt-2 text-gray-600 dark:text-gray-300">{description}</div>
+        <div class="flex flex-wrap mt-2">
+          <ul class="flex flex-row mb-2 gap-x-2">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <img
+          class="rounded shadow-2xl shadow-white/10"
+          src={image}
+          alt={`Captura de pantalla del proyecto " ${image} "`}
+        />
+        <footer class="flex items-end justify-start mt-2 gap-x-2">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Code
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Link class="size-4" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  img {
+    mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+import Badge from "./Badge.astro";
+import SocialPill from "./SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import MailIcon from "../components/icons/Mail.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="https://media.licdn.com/dms/image/D4E03AQEYFCc4xle9IQ/profile-displayphoto-shrink_200_200/0/1664378929084?e=1727308800&v=beta&t=-pRjASAcqKjp57krzHKgzmwkGA2cKCExEJYeC715Co8"
+      alt="juanma photo"
+    />
+    <a
+      href="https://www.linkedin.com/in/juan-manuel-moreno-garrido-b319bb1a0"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+      ><Badge>Frontend Developer</Badge></a
+    >
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hola, soy Juanma Moreno
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-blue-200 [&>strong]:text-blue-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    4 años de experiencia
+    <strong>Desarrollador web. De Bornos, Cádiz.</strong>
+    Fácil adaptabilidad a nuevas tecnologías.
+  </p>
+  <nav class="flex gap-4 mt-8 flex-wrap">
+    <SocialPill href="https://www.linkedin.com/in/juan-manuel-moreno-garrido-b319bb1a0">
+      <LinkedinIcon class="size-4" />LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/jmorgar">
+      <GitHubIcon class="size-4" />GitHub
+    </SocialPill>
+    <SocialPill href="mailto:juanmamorenogarrido@gmail.com">
+      <MailIcon class="size-4" />juanmamorenogarrido@gmail.com
+    </SocialPill>
+  </nav>
+</div>
