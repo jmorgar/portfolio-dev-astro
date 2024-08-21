@@ -1,0 +1,55 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import { TAGS } from "../utils/tags";
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Frontend Developer",
+    company: "Sportradar",
+    description:
+      "Desarrollo de nuevos requerimientos del cliente e integración de nuevos proveedores utilizando tecnologías como .NET, JavaScript y Knockout.js. Creación de componentes reutilizables con Lit y Vite, optimizando la migración del proyecto y mejorando la eficiencia y mantenibilidad del código. Responsable del desarrollo, funcionalidad y diseño de los componentes. Implementación de Storybook para documentar y desarrollar componentes de manera más eficiente, facilitando la colaboración entre equipos y acelerando la iteración en el desarrollo. Integración de pruebas automatizadas con Playwright para asegurar la calidad, rendimiento y estabilidad de los componentes.",
+    tags: [
+      TAGS.HTML,
+      TAGS.Lit,
+      TAGS.JavaScript,
+      TAGS.StoryBook,
+      TAGS.Playwright,
+      TAGS.Css,
+    ],
+  },
+  {
+    date: "Julio 2022-Agosto 2023",
+    title: "Frontend Mid-Developer",
+    company: "GFT Spain",
+    description:
+      "Desarrollo de un plugin con diseño responsivo para dispositivos móviles y web, optimizando la experiencia de usuario en diversas pantallas. Migración de JSP a Angular, implementando nuevas funcionalidades según los requisitos del proyecto y asegurando la calidad en plazos establecidos. Despliegue del pipeline en Jenkins para una integración y entrega continua eficiente. Resolución de incidencias para mantener la estabilidad del sistema y creación de componentes reutilizables, promoviendo la modularidad y eficiencia del desarrollo. Refactorización del código existente para mejorar calidad, legibilidad y rendimiento, adaptándolo al nuevo diseño responsivo. Realización de correcciones en Vue.js para la generación de PDF.",
+    tags: [TAGS.Angular, TAGS.HTML, TAGS.Css, TAGS.Cypress, TAGS.JavaScript],
+  },
+  {
+    date: "Julio 2021-Julio 2022",
+    title: "Frontend Mid-Developer",
+    company: "Ingenia/Babel",
+    description:
+      "Participé en la migración de JSP a Angular y Java 8, desarrollando nuevos requisitos y funcionalidades para el cliente, asegurando el cumplimiento de estándares de calidad y plazos. Diseñé y desarrollé componentes reutilizables, fomentando la modularidad y eficiencia en la aplicación. Lideré un equipo de desarrolladores junior, brindando orientación, seguimiento y retroalimentación constructiva para asegurar la calidad del código entregado. Además, me encargué del análisis y asignación de tareas, optimizando la productividad del equipo.",
+    tags: [TAGS.Angular, TAGS.HTML, TAGS.Css, TAGS.Cypress, TAGS.JavaScript],
+  },
+  {
+    date: "Marzo 2020-Julio 2021",
+    title: "Junior Full Stack Developer",
+    company: "NTT Data",
+    description:
+      "Responsable de analizar y resolver incidencias reportadas por el equipo de QA, garantizando una resolución rápida y eficiente. Desarrollé nuevas pantallas y funcionalidades basadas en los requisitos del cliente, siguiendo los principios SOLID. Además, brindé orientación y supervisión a un miembro en formación, apoyándolo durante su aprendizaje.",
+    tags: [TAGS.Angular, TAGS.HTML, TAGS.Css, TAGS.Java],
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
