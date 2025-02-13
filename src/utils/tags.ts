@@ -9,6 +9,8 @@ import LitIcon from "../components/icons/Lit.astro";
 import PlaywrightIcon from "../components/icons/Playwright.astro";
 import StorybookIcon from "../components/icons/Storybook.astro";
 import TailwindIcon from "../components/icons/Tailwind.astro";
+import ReactIcon from "../components/icons/React.astro";
+import VercelIcon from "../components/icons/Vercel.astro";
 import type { Tag } from "../types/Tag";
 
 export const TAGS: {
@@ -23,6 +25,8 @@ export const TAGS: {
   StoryBook: Tag;
   Playwright: Tag;
   Tailwind: Tag;
+  React: Tag;
+  Vercel: Tag;
 } = {
   HTML: {
     name: "HTML",
@@ -78,5 +82,15 @@ export const TAGS: {
     name: "Tailwind",
     class: "bg-[#06b6d4] text-white",
     icon: TailwindIcon,
+  },
+  React: {
+    name: "React",
+    class: "bg-[#61dafb] text-white",
+    icon: ReactIcon,
+  },
+  Vercel: {
+    name: "Vercel",
+    class: "bg-[#000] text-white",
+    icon: VercelIcon,
   },
 };
